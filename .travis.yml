@@ -1,15 +1,9 @@
 language: node_js
 node_js:
-  - "node"
-
-cache: npm
-
-script: npm run build
-
-deploy:
-provider: pages
-skip_cleanup: true
-github_token: $GITHUB_TOKEN
-local_dir: dist
-on:
-  branch: master
+  - "8"
+ addons:
+   chrome: stable
+ sudo: required
+ before_script:
+   - "sudo chown root /opt/google/chrome/chrome-sandbox"
+   - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"   

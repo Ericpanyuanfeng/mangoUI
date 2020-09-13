@@ -1,17 +1,16 @@
 <template>
-  <button
-    class="g-button"
-    :class="{ [`icon-${iconPosition}`]: true }"
-    @click="$emit('click')"
-  >
+  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
-    <div class="content"><slot /></div>
+    <div class="content">
+      <slot />
+    </div>
   </button>
 </template>
 <script>
 import Icon from "./icon";
 export default {
+  name: "MgButton",
   components: {
     "g-icon": Icon,
   },
@@ -31,7 +30,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @keyframes spin {
   0% {
     transform: rotate(0deg);

@@ -36,7 +36,7 @@
   <body>
     <div id="app">
       <div style="border: 1px solid red;">
-        <g-row gutter="20">
+        <!-- <g-row gutter="20">
           <g-col>1</g-col>
           <g-col>2</g-col>
         </g-row>
@@ -50,10 +50,26 @@
           <g-col>2</g-col>
           <g-col>3</g-col>
           <g-col>4</g-col>
-        </g-row>
+        </g-row> -->
         <g-row gutter="20">
-          <g-col span="4">2</g-col>
-          <g-col span="18" offset="2">22</g-col>
+          <g-col
+            span="2"
+            :phone="{span:24}"
+            :pad="{span:8}"
+            :narrow-pc="{span:4}"
+            :pc="{span:2}"
+            :wide-pc="{span:1}"
+            >2
+          </g-col>
+          <g-col
+            span="20"
+            :phone="{span:24}"
+            :pad="{span:16}"
+            :narrow-pc="{span:20}"
+            :pc="{span:22}"
+            :wide-pc="{span:23}"
+            >22
+          </g-col>
         </g-row>
       </div>
       <hr />

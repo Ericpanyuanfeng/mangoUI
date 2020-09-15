@@ -58,8 +58,7 @@ new Vue({
               console.log("他已经氪金了");
             },
           },
-          autoClose: true,
-          autoCloseDelay: 3,
+          autoClose: 3,
         }
       );
     },

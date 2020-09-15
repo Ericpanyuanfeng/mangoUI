@@ -26,8 +26,7 @@
         font-size: var(--font-size);
       }
     </style>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body>
     <style>
@@ -35,31 +34,33 @@
         border: 1px solid #666;
         min-height: 100px;
       }
-      .sider{
+      .sider {
         background: #333;
         width: 160px;
       }
-      .sider.slide-enter, .sider.slide-leave-to{
+      .sider.slide-enter,
+      .sider.slide-leave-to {
         margin-left: -160px;
       }
-      .header{
+      .header {
         background: #999;
         height: 100px;
       }
-      .footer{
+      .footer {
         background: #ccc;
         height: 50px;
       }
     </style>
     <div id="app">
-      <g-layout style="height: 100vh;">
+      <button @click="showToast">按钮</button>
+      <!-- <g-layout style="height: 100vh;">
         <g-sider >sider</g-sider>
         <g-layout>
           <g-header >header</g-header>
           <g-content >content</g-content>
           <g-footer >footer</g-footer>
         </g-layout>
-      </g-layout>
+      </g-layout> -->
       <!-- <div>
         <g-row>
           <g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">
@@ -107,8 +108,8 @@
           <g-button icon="left">上一页</g-button>
           <g-button>首页</g-button>
           <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group> -->
-      </div>
+        </g-button-group>
+       </div> -->
     </div>
     <script src="./src/app.js"></script>
   </body>

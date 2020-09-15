@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Steven-UV/mangoUI#readme",
   "dependencies": {
+    "toast": "^0.2.10",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4"
   },

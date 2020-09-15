@@ -37,11 +37,20 @@ new Vue({
   },
   created() {},
   methods: {
-    showToast() {
+    showToast1() {
+      this.showToast("top");
+    },
+    showToast2() {
+      this.showToast("middle");
+    },
+    showToast3() {
+      this.showToast("bottom");
+    },
+    showToast(position) {
       this.$toast(
         `您的当前战斗力为 ${parseInt(Math.random() * 100)},变强请氪金`,
         {
-          position: "bottom",
+          position,
           enableHtml: false,
           closeButton: {
             text: "已氪金",
@@ -50,7 +59,7 @@ new Vue({
             },
           },
           autoClose: true,
-          autoCloseDelay: 10,
+          autoCloseDelay: 3,
         }
       );
     },

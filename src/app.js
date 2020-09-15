@@ -41,7 +41,7 @@ new Vue({
       this.$toast(
         `您的当前战斗力为 ${parseInt(Math.random() * 100)},变强请氪金`,
         {
-          position: "middle",
+          position: "bottom",
           enableHtml: false,
           closeButton: {
             text: "已氪金",

@@ -38,18 +38,18 @@ new Vue({
   created() {},
   methods: {
     showToast() {
-      this.$toast(
-        "<strong>Hello World</strong>",
-        { enableHtml: true }
-        // {
-        //   closeButton: {
-        //     text: "关闭",
-        //     callback() {
-        //       console.log("用户说他知道了");
-        //     },
-        //   },
-        // }
-      );
+      this.$toast("<strong>Hello World</strong>", {
+        position: "middle",
+        enableHtml: true,
+        closeButton: {
+          text: "关闭",
+          callback() {
+            console.log("已关闭 hello world");
+          },
+        },
+        autoClose: true,
+        autoCloseDelay: 1,
+      });
     },
   },
 });

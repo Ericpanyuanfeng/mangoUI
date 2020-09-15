@@ -38,7 +38,18 @@ new Vue({
   created() {},
   methods: {
     showToast() {
-      this.$toast("我是 message");
+      this.$toast(
+        "<strong>Hello World</strong>",
+        { enableHtml: true }
+        // {
+        //   closeButton: {
+        //     text: "关闭",
+        //     callback() {
+        //       console.log("用户说他知道了");
+        //     },
+        //   },
+        // }
+      );
     },
   },
 });

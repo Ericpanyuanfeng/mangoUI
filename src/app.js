@@ -38,18 +38,21 @@ new Vue({
   created() {},
   methods: {
     showToast() {
-      this.$toast("<strong>Hello World</strong>", {
-        position: "middle",
-        enableHtml: true,
-        closeButton: {
-          text: "关闭",
-          callback() {
-            console.log("已关闭 hello world");
+      this.$toast(
+        `您的当前战斗力为 ${parseInt(Math.random() * 100)},变强请氪金`,
+        {
+          position: "middle",
+          enableHtml: false,
+          closeButton: {
+            text: "已氪金",
+            callback() {
+              console.log("他已经氪金了");
+            },
           },
-        },
-        autoClose: true,
-        autoCloseDelay: 1,
-      });
+          autoClose: true,
+          autoCloseDelay: 10,
+        }
+      );
     },
   },
 });

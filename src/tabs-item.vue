@@ -61,6 +61,7 @@ $disabled-color: gray;
   }
   &.disabled {
     color: $disabled-color;
+    cursor: not-allowed;
   }
 }
 </style>

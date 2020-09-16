@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: MgTabsPane,
+  name: "MgTabsPane",
 };
 </script>
 <style lang="scss" scoped>

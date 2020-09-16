@@ -5,7 +5,11 @@
 </template>
 <script>
 export default {
-  name: MgTabsItem,
+  name: "MgTabsItem",
+  disabled: {
+    type: Boolean,
+    default: false,
+  },
 };
 </script>
 <style lang="scss" scoped>

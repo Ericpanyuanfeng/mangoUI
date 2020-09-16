@@ -26,93 +26,9 @@
         font-size: var(--font-size);
       }
     </style>
-    <style></style>
   </head>
   <body>
-    <style>
-      .demo {
-        border: 1px solid #666;
-        min-height: 100px;
-      }
-      .sider {
-        background: #333;
-        width: 160px;
-      }
-      .sider.slide-enter,
-      .sider.slide-leave-to {
-        margin-left: -160px;
-      }
-      .header {
-        background: #999;
-        height: 100px;
-      }
-      .footer {
-        background: #ccc;
-        height: 50px;
-      }
-    </style>
-    <div id="app">
-      <button @click="showToast1">top</button>
-      <button @click="showToast2">middle</button>
-      <button @click="showToast3">bottom</button>
-      <!-- <g-layout style="height: 100vh;">
-        <g-sider >sider</g-sider>
-        <g-layout>
-          <g-header >header</g-header>
-          <g-content >content</g-content>
-          <g-footer >footer</g-footer>
-        </g-layout>
-      </g-layout> -->
-      <!-- <div>
-        <g-row>
-          <g-col span="23" offset="1" :narrow-pc="{span:12,offset:12}">
-            <div class="demo"></div>
-          </g-col>
-        </g-row>
-      </div>
-      <hr />
-      <div class="box">
-        <g-input value="张三" disabled></g-input>
-        <g-input value="李四" readonly></g-input>
-        <g-input value="王五"></g-input>
-      </div>
-      <div class="box">
-        <g-input value="刘" @change="inputChange"></g-input>
-      </div>
-      <div class="box">
-        <g-input v-model="message"></g-input>
-        <p>{{message}}</p>
-        <button @click="message+=1">+1</button>
-      </div>
-      <div class="box">
-        <g-input value="刘" error="姓名不能少于两个字"></g-input>
-      </div>
-      <div class="box">
-        <g-button :loading="loading1" @click="loading1=!loading1">
-          按钮
-        </g-button>
-        <g-button
-          icon="settings"
-          :loading="loading2"
-          @click="loading2=!loading2"
-        >
-          按钮
-        </g-button>
-        <g-button
-          icon="settings"
-          :loading="loading3"
-          @click="loading3=!loading3"
-          icon-position="right"
-        >
-          按钮
-        </g-button>
-        <g-button-group>
-          <g-button icon="left">上一页</g-button>
-          <g-button>首页</g-button>
-          <g-button icon="right" icon-position="right">下一页</g-button>
-        </g-button-group>
-       </div> -->
-    </div>
+    <div id="app"></div>
     <script src="./src/app.js"></script>
   </body>
 </html>

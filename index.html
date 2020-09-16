@@ -32,11 +32,11 @@
       <g-tabs :selected.sync="selectedTab">
         <g-tabs-head>
           <template slot="actions"><button>设置</button></template>
-          <g-tabs-item name="news"
-            ><g-icon name="settings"></g-icon>时政</g-tabs-item
+          <g-tabs-item name="news">时政</g-tabs-item>
+          <g-tabs-item name="finance">财经</g-tabs-item>
+          <g-tabs-item name="sports" disabled
+            ><g-icon name="settings"></g-icon>体育</g-tabs-item
           >
-          <g-tabs-item name="finance" disabled>财经</g-tabs-item>
-          <g-tabs-item name="sports">体育</g-tabs-item>
         </g-tabs-head>
         <g-tabs-body>
           <g-tabs-pane name="news">时政相关资讯</g-tabs-pane>

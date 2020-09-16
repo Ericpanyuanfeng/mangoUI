@@ -22,20 +22,25 @@ export default {
 </script>
 <style lang="scss" scoped>
 $tab-height: 40px;
-$border-bottom-color: blue;
+$line-color: blue;
+$border-color: #ddd;
 .tabs-head {
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
   position: relative;
+  border-bottom: 1px solid $border-color;
   > .line {
     position: absolute;
     bottom: 0;
-    border-bottom: 1px solid $border-bottom-color;
+    border-bottom: 1px solid $line-color;
     transition: all 300ms;
   }
   > .actions-wrapper {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 1em;
   }
 }
 </style>

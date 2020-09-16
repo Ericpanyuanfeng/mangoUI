@@ -6,6 +6,7 @@
 <script>
 export default {
   name: "MgTabsBody",
+  inject: ["eventBus"],
 };
 </script>
 <style lang="scss" scoped>

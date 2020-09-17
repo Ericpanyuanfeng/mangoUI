@@ -1,6 +1,6 @@
 <template>
-  <div class="popover" @click="xxx">
-    <div v-if="visiable" class="content-wrapper">
+  <div class="popover" @click.stop="xxx">
+    <div v-if="visible" class="content-wrapper" @click.stop>
       <slot name="content"></slot>
     </div>
     <slot></slot>
@@ -11,12 +11,21 @@ export default {
   name: "MgPopover",
   data() {
     return {
-      visiable: false,
+      visible: false,
     };
   },
   methods: {
     xxx() {
-      return (this.visiable = !this.visiable);
+      this.visible = !this.visible;
+      if (this.visible === true) {
+        this.$nextTick(() => {
+          let eventHandler = () => {
+            this.visible = false;
+            document.removeEventListener("click", eventHandler);
+          };
+          document.addEventListener("click", eventHandler);
+        });
+      }
     },
   },
 };

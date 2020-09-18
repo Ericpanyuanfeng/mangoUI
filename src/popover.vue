@@ -118,7 +118,6 @@ $border-radius: 4px;
     width: 0;
     height: 0;
     position: absolute;
-    left: 10px;
   }
   &.position-top {
     transform: translateY(-100%);
@@ -177,4 +176,4 @@ $border-radius: 4px;
     }
   }
 }
-</style>
+</style>  

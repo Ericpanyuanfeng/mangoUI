@@ -1,8 +1,8 @@
 ---
-title:grid
+title:Grid
 ---
 
-# 栅格-grid
+# 栅格-Grid
 
 ## 预览
 

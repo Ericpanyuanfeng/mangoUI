@@ -27,7 +27,7 @@ $background: rgb(253, 208, 0);
       background: $background;
     }
     > .content-wrapper {
-      background: lighten($background, 40%);
+      background: lighten($background, 25%);
     }
     > .layout-wrapper {
       height: 6em;
@@ -36,7 +36,7 @@ $background: rgb(253, 208, 0);
         background: lighten($background, 15%);
       }
       > .content-wrapper {
-        background: lighten($background, 40%);
+        background: lighten($background, 25%);
       }
       > .layout-wrapper {
         > .content-wrapper {

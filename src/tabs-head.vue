@@ -13,16 +13,16 @@ export default {
   inject: ["eventBus"],
   mounted() {
     this.eventBus.$on("update:selected", (item, vm) => {
-      let { width, height, top, left } = vm.$el.getBoundingClientRect();
+      let { width } = vm.$el.getBoundingClientRect();
       this.$refs.line.style.width = `${width}px`;
-      this.$refs.line.style.left = `${left}px`;
+      this.$refs.line.style.left = vm.$el.offsetLeft + `px`;
     });
   },
 };
 </script>
 <style lang="scss" scoped>
 $tab-height: 40px;
-$line-color: blue;
+$line-color: rgb(253, 208, 0);
 $border-color: #ddd;
 .tabs-head {
   display: flex;

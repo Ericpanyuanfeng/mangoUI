@@ -1,18 +1,18 @@
 <template>
-  <div class="wrapper" :class="{error}">
+  <div class="wrapper" :class="{ error }">
     <input
       :value="value"
       :disabled="disabled"
       :readonly="readonly"
       type="text"
-      @change="$emit('change',$event.target.value)"
-      @input="$emit('input',$event.target.value)"
-      @focus="$emit('focus',$event.target.value)"
-      @blur="$emit('blur',$event.target.value)"
+      @change="$emit('change', $event.target.value)"
+      @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus', $event.target.value)"
+      @blur="$emit('blur', $event.target.value)"
     />
     <template v-if="error">
       <icon name="error" class="icon-error"></icon>
-      <span class="errorMessage">{{error}}</span>
+      <span class="errorMessage">{{ error }}</span>
     </template>
   </div>
 </template>
@@ -47,6 +47,7 @@ $border-radius: 4px;
 $font-size: 12px;
 $box-shadow-color: rgba(0, 0, 0, 0.5);
 $red: #f1453d;
+$readonly-color: #bbb;
 .wrapper {
   font-size: $font-size;
   display: inline-flex;
@@ -69,8 +70,8 @@ $red: #f1453d;
     }
     &[disabled],
     &[readonly] {
-      color: #bbb;
-      border-color: #bbb;
+      color: $readonly-color;
+      border-color: $readonly-color;
       cursor: not-allowed;
     }
   }

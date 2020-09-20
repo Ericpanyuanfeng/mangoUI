@@ -6,9 +6,7 @@
         <div v-else v-html="$slots.default[0]"></div>
       </div>
       <div class="line" ref="line"></div>
-      <span class="close" v-if="closeButton" @click="onClickClose">
-        {{ closeButton.text }}
-      </span>
+      <span class="close" v-if="closeButton" @click="onClickClose">{{ closeButton.text }}</span>
     </div>
   </div>
 </template>
@@ -101,7 +99,7 @@ $animation-duration: 0.3s;
 }
 @keyframes fade-in {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -123,6 +121,7 @@ $animation-duration: 0.3s;
   transform: translateX(-50%);
   &.position-top {
     top: 0;
+    z-index: 20;
     .toast {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -136,6 +135,7 @@ $animation-duration: 0.3s;
   }
   &.position-bottom {
     bottom: 0;
+    z-index: 1;
     .toast {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;

@@ -130,6 +130,7 @@ $animation-duration: 0.3s;
   }
   &.position-middle {
     top: 50%;
+    z-index: 1;
     transform: translateX(-50%) translateY(-50%);
     animation: fade-in $animation-duration;
   }

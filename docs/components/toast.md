@@ -17,14 +17,9 @@ title:Toast
 ```
 <template>
   <div>
-    <g-button @click="auto">设置 zIndex</g-button>&nbsp;&nbsp;
-    <g-button @click="auto">会自动关闭</g-button>&nbsp;&nbsp;
-    <g-button @click="auto">点击按钮才关闭</g-button>&nbsp;&nbsp;
-    <g-button @click="auto">支持 HTML 语法</g-button>&nbsp;&nbsp;
-    <br />
-    <g-button @click="top">上方弹出</g-button>
-    <g-button @click="middle">中间弹出</g-button>
-    <g-button @click="bottom">下方弹出</g-button>
+    <g-button @click="showToast1">上方弹出</g-button>
+    <g-button @click="showToast2">中间弹出</g-button>
+    <g-button @click="showToast3">下方弹出</g-button>
   </div>
 </template>
 <script>
@@ -36,27 +31,27 @@ Vue.use(plugin);
 export default {
   components: { "g-toast": Toast, "g-button": Button },
   methods: {
-    auto() {
-      this.$toast("我是 toast 内容", {
-        zIndex: 30,
-        autoClose: 2,
+    showToast1() {
+      this.showToast("top");
+    },
+    showToast2() {
+      this.showToast("middle");
+    },
+    showToast3() {
+      this.showToast("bottom");
+    },
+    showToast(position) {
+      this.$toast("我是 Toast 内容", {
+        position,
+        enableHtml: false,
         closeButton: {
-          text: "确定",
-          callback: () => {
-            console.log("回调的输出");
+          text: "关闭",
+          callback() {
+            console.log("已关闭弹窗");
           },
         },
-        enableHTML: true,
+        autoClose: 3,
       });
-    },
-    top() {
-      this.$toast("我是 toast 内容", { position: "top" });
-    },
-    middle() {
-      this.$toast("我是 toast 内容", { position: "middle" });
-    },
-    bottom() {
-      this.$toast("我是 toast 内容", { position: "bottom" });
     },
   },
 };
@@ -65,69 +60,18 @@ export default {
 
 ## 属性
 
-### 2. align
+### 1. position
 
-通过给 `Row` 设置 `align` 属性, 可以定义其子组件在该节点里面的排版方式。当该属性分别取`left`,`right`,`center` 的时候其子组件的排列方式分别为【靠左排列】【靠右排列】和【居中排列】。
+可以设定 `Toast` 弹出的位置 ，支持 `top`, `middle`, `bottom` 三个值。
 
-```
-<i-row align="left">
-  <i-col span="8">left</i-col>
-  <i-col span="8">left</i-col>
-</i-row>
-<i-row align="center">
-  <i-col span="8">center</i-col>
-  <i-col span="8">center</i-col>
-</i-row>
-<i-row align="right">
-  <i-col span="8">right</i-col>
-  <i-col span="8">right</i-col>
-</i-row>
-```
+### 2. closeButton
 
-### 3. span
+`Toast` 组件的右侧按钮文本可编辑，并且支持传入一个回调。 `closeButton` 选项接收一个对象。对象包括 `text` 与 `callback` 属性。用于设定按钮的文本与回调。
 
-栅格系统中用 1 到 24 的值来表示列的跨越的范围。通过设置 `col` 的 `span` 属性来实现。
+### 3. autoClose
 
-例如：三个等宽的列可以使用`<i-col span="8">列</i-col>` 来创建其中一个，其余两个再复制两份。
+此属性可以设定 `Toast` 弹出后自动关闭的延时时长，单位为“ 秒 ”，默认延时 3 秒后自动关闭。
 
-### 4. offset
+### 4. enableHtml
 
-通过设置 `col` 的 `offset` 属性,可以将列向右侧偏。
-例如，offset="4" 将元素向右侧偏移了 4 个列（column）的宽度。
-
-```
-<i-row>
-  <i-col span="2" offset="6"> <span>col-2</span> </i-col>
-  <i-col span="5" offset="3"> <span>col-5</span> </i-col>
-  <i-col span="4" offset="4"> <span>col-4</span> </i-col>
-</i-row>
-```
-
-### 5. 响应式
-
-栅格系统支持 ipad 、narrowPc 、pc 、widePc 四种设备的响应式设置。
-若不给 `col` 这四个属性，默认为 手机端响应，`span` 值为 24。
-注意： 若设置这四个属性，则需要对应属性 + `offset` 的值的和为 24。
-
-```
-<g-row class="row">
-  <g-col class="item"
-          span="24"
-         :ipad="{span:8}"
-         :narrow-pc="{span:4}"
-         :pc="{span: 2}"
-         :wide-pc="{span:1}"
- >
-    col
-  </g-col>
-  <g-col class="item"
-          span="24"
-         :ipad="{span:16}"
-         :narrow-pc="{span:20}"
-         :pc="{span: 20,offset:2}"
-         :wide-pc="{span:21}"
-  >
-    col
-  </g-col>
-</g-row>
-```
+`Toast` 组件还支持 `HTML` 语法，该功能默认关闭，你需要传递一个 `enableHTML` 参数来开启它, `enableHtml:true` 。 开启后就可以在 `Toast` 内容区域写 `HTML` 语法。

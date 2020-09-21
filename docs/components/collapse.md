@@ -12,8 +12,8 @@ title:Collapse
 
 ## 使用方法
 
-```
-<div>html
+```html
+<div>
   <g-collapse :selected.sync="selectedTab" single>
     <g-collapse-item title="标题1" name="1">1</g-collapse-item>
     <g-collapse-item title="标题2" name="2">2</g-collapse-item>

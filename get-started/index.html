@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>快速上手 | 芒果 UI</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="一个好用的 UI 框架">
+    <link rel="preload" href="/mangoUI/assets/css/0.styles.4695aba3.css" as="style"><link rel="preload" href="/mangoUI/assets/js/app.c2ee7328.js" as="script"><link rel="preload" href="/mangoUI/assets/js/2.9795a408.js" as="script"><link rel="preload" href="/mangoUI/assets/js/22.fa022737.js" as="script"><link rel="prefetch" href="/mangoUI/assets/js/10.017e978a.js"><link rel="prefetch" href="/mangoUI/assets/js/11.6afbc322.js"><link rel="prefetch" href="/mangoUI/assets/js/12.21ac1128.js"><link rel="prefetch" href="/mangoUI/assets/js/13.8aa951b7.js"><link rel="prefetch" href="/mangoUI/assets/js/14.87f3adb3.js"><link rel="prefetch" href="/mangoUI/assets/js/15.1e3d1e85.js"><link rel="prefetch" href="/mangoUI/assets/js/16.48dd10e3.js"><link rel="prefetch" href="/mangoUI/assets/js/17.9675dd4d.js"><link rel="prefetch" href="/mangoUI/assets/js/18.f1e3c849.js"><link rel="prefetch" href="/mangoUI/assets/js/19.88cf2ac6.js"><link rel="prefetch" href="/mangoUI/assets/js/20.ccd33275.js"><link rel="prefetch" href="/mangoUI/assets/js/21.7c566269.js"><link rel="prefetch" href="/mangoUI/assets/js/23.f05db9a7.js"><link rel="prefetch" href="/mangoUI/assets/js/24.700dad9d.js"><link rel="prefetch" href="/mangoUI/assets/js/25.3c08eca4.js"><link rel="prefetch" href="/mangoUI/assets/js/3.d2785673.js"><link rel="prefetch" href="/mangoUI/assets/js/4.8911e7dc.js"><link rel="prefetch" href="/mangoUI/assets/js/5.f33e351f.js"><link rel="prefetch" href="/mangoUI/assets/js/6.1489b7c1.js"><link rel="prefetch" href="/mangoUI/assets/js/7.0d004a7e.js"><link rel="prefetch" href="/mangoUI/assets/js/8.c4df0a97.js"><link rel="prefetch" href="/mangoUI/assets/js/9.2bba4d9b.js">
+    <link rel="stylesheet" href="/mangoUI/assets/css/0.styles.4695aba3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mangoUI/" class="home-link router-link-active"><!----> <span class="site-name">芒果 UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>入门</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/mangoUI/install/" class="sidebar-link">安装</a></li><li><a href="/mangoUI/get-started/" aria-current="page" class="active sidebar-link">快速上手</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mangoUI/get-started/#引入必要资源" class="sidebar-link">引入必要资源</a></li><li class="sidebar-sub-header"><a href="/mangoUI/get-started/#注册组件" class="sidebar-link">注册组件</a></li><li class="sidebar-sub-header"><a href="/mangoUI/get-started/#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/mangoUI/get-started/#效果" class="sidebar-link">效果</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="快速上手"><a href="#快速上手" class="header-anchor">#</a> 快速上手</h1> <h2 id="引入必要资源"><a href="#引入必要资源" class="header-anchor">#</a> 引入必要资源</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Button <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;useful-mango&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;useful-mango/dist/index.css&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="注册组件"><a href="#注册组件" class="header-anchor">#</a> 注册组件</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">&quot;App&quot;</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;g-button&quot;</span><span class="token operator">:</span> Button<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>g-button</span><span class="token punctuation">&gt;</span></span>默认按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>g-button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="效果"><a href="#效果" class="header-anchor">#</a> 效果</h2> <p>详见 [ 组件 ]</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mangoUI/install/" class="prev">
+        安装
+      </a></span> <span class="next"><a href="/mangoUI/components/button.html">
+        按钮-Button
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mangoUI/assets/js/app.c2ee7328.js" defer></script><script src="/mangoUI/assets/js/2.9795a408.js" defer></script><script src="/mangoUI/assets/js/22.fa022737.js" defer></script>
+  </body>
+</html>

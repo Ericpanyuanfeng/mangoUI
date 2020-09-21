@@ -12,7 +12,7 @@ title:Layout
 
 ## 使用方法
 
-```
+```html
 <div class="wrapper">
   <g-layout>
     <g-header> header </g-header>
@@ -22,13 +22,13 @@ title:Layout
     </g-layout>
     <g-footer> footer </g-footer>
   </g-layout>
-  <br>
+  <br />
   <g-layout>
     <g-header> header </g-header>
     <g-content> content </g-content>
     <g-footer> footer </g-footer>
   </g-layout>
-  <br>
+  <br />
 </div>
 ```
 

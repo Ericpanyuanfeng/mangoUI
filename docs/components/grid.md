@@ -12,7 +12,7 @@ title:Grid
 
 ## 使用方法
 
-```
+```vue
 <g-row class="row">
   <g-col class="item" span="24">col-24</g-col>
 </g-row>
@@ -39,7 +39,7 @@ title:Grid
 
 通过给 `Row` 设置 `gutter` 属性, 可以让栅格有间隔，单位为 px 。
 
-```
+```vue
 <g-row gutter="30">
   <g-col span="8"> <span> col-8; gutter-30;</span> </g-col>
   <g-col span="8"> <span> col-8; gutter-30;</span> </g-col>
@@ -56,7 +56,7 @@ title:Grid
 
 通过给 `Row` 设置 `align` 属性, 可以定义其子组件在该节点里面的排版方式。当该属性分别取`left`,`right`,`center` 的时候其子组件的排列方式分别为【靠左排列】【靠右排列】和【居中排列】。
 
-```
+```vue
 <i-row align="left">
   <i-col span="8">left</i-col>
   <i-col span="8">left</i-col>
@@ -82,7 +82,7 @@ title:Grid
 通过设置 `col` 的 `offset` 属性,可以将列向右侧偏。
 例如，offset="4" 将元素向右侧偏移了 4 个列（column）的宽度。
 
-```
+```vue
 <i-row>
   <i-col span="2" offset="6"> <span>col-2</span> </i-col>
   <i-col span="5" offset="3"> <span>col-5</span> </i-col>
@@ -96,7 +96,7 @@ title:Grid
 若不给 `col` 这四个属性，默认为 手机端响应，`span` 值为 24。
 注意： 若设置这四个属性，则需要对应属性 + `offset` 的值的和为 24。
 
-```
+```html
 <g-row class="row">
   <g-col class="item"
           span="24"

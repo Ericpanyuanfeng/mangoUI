@@ -12,14 +12,14 @@ title:Input
 
 ## 使用方法
 
-```
+```html
 <g-input></g-input>
 <g-input disabled></g-input>
 <g-input readonly></g-input>
 <g-input error="error"></g-input>
-<br>
+<br />
 <g-input v-model="xxx"></g-input>
-<br>
+<br />
 <span>value:&nbsp;{{xxx}}</span>
 ```
 

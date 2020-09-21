@@ -14,34 +14,34 @@ title:Tabs
 
 此组件的 `Tabs` `TabsItem` `TabsPane` 必须有一一对应的 `name`。
 
-```
-  <div>
-    <g-tabs :selected.sync="selectedTab">
-      <g-tabs-head>
-        <g-tabs-item name="tab1">
-          <g-icon name="settings"></g-icon>
-          Tab1
-        </g-tabs-item>
-        <g-tabs-item name="tab2">
-          Tab2
-        </g-tabs-item>
-        <g-tabs-item name="tab3" disabled>
-          Tab3
-        </g-tabs-item>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="tab1">
-          内容1
-        </g-tabs-pane>
-        <g-tabs-pane name="tab2">
-          内容2
-        </g-tabs-pane>
-        <g-tabs-pane name="tab3">
-          内容3
-        </g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
-  </div>
+```html
+<div>
+  <g-tabs :selected.sync="selectedTab">
+    <g-tabs-head>
+      <g-tabs-item name="tab1">
+        <g-icon name="settings"></g-icon>
+        Tab1
+      </g-tabs-item>
+      <g-tabs-item name="tab2">
+        Tab2
+      </g-tabs-item>
+      <g-tabs-item name="tab3" disabled>
+        Tab3
+      </g-tabs-item>
+    </g-tabs-head>
+    <g-tabs-body>
+      <g-tabs-pane name="tab1">
+        内容1
+      </g-tabs-pane>
+      <g-tabs-pane name="tab2">
+        内容2
+      </g-tabs-pane>
+      <g-tabs-pane name="tab3">
+        内容3
+      </g-tabs-pane>
+    </g-tabs-body>
+  </g-tabs>
+</div>
 ```
 
 ## 属性

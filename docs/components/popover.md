@@ -12,7 +12,7 @@ title:Popover
 
 ## 使用方法
 
-```
+```html
 <div class="popover-wrapper">
   <g-popover position="bottom">
     <template slot="content">
@@ -27,7 +27,6 @@ title:Popover
     <g-button>hover 显示内容</g-button>
   </g-popover>
 </div>
-
 ```
 
 ## 属性

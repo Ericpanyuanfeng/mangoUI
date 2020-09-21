@@ -12,16 +12,16 @@ title:Button
 
 ## 使用方法
 
-```
+```html
 <g-button>默认按钮</g-button>
 <g-button icon="settings">默认按钮</g-button>
 <g-button :loading="true">默认按钮</g-button>
 <g-button disabled>默认按钮</g-button>
-<i-button-group>
-  <i-button>默认按钮</i-button>
-  <i-button>默认按钮</i-button>
-  <i-button>默认按钮</i-button>
-</i-button-group>
+<g-button-group>
+  <g-button>默认按钮</g-button>
+  <g-button>默认按钮</g-button>
+  <g-button>默认按钮</g-button>
+</g-button-group>
 ```
 
 ## 属性

@@ -14,7 +14,7 @@ title:Toast
 
 使用 Toast 组件，需要引入该组件,然后使用 Vue 官方文档中插件的使用方法使用该插件。
 
-```
+```vue
 <template>
   <div>
     <g-button @click="showToast1">上方弹出</g-button>
